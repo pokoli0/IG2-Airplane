@@ -119,21 +119,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Codigo inicial\IG2Object.h" />
     <ClInclude Include="Airplane.h" />
     <ClInclude Include="Blade.h" />
     <ClInclude Include="Helix.h" />
     <ClInclude Include="IG2ApplicationContext.h" />
     <ClInclude Include="IG2App.h" />
+    <ClInclude Include="IG2Object.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Codigo inicial\IG2Object.cpp" />
     <ClCompile Include="Airplane.cpp" />
     <ClCompile Include="Blade.cpp" />
     <ClCompile Include="Helix.cpp" />
     <ClCompile Include="IG2ApplicationContext.cpp" />
     <ClCompile Include="IG2Main.cpp" />
     <ClCompile Include="IG2App.cpp" />
+    <ClCompile Include="IG2Object.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\bin\resources.cfg" />

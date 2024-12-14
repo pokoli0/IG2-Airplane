@@ -106,8 +106,8 @@ void IG2App::setupScene(void){
     SceneNode* sNode = mSM->getRootSceneNode()->createChildSceneNode("nNode");
     //Blade* b = new Blade(Ogre::Vector3(0, 0, 0), sNode, mSM);
 
-    //Helix* h = new Helix(Ogre::Vector3(0, 0, 0), sNode, mSM, 10);
-
+    //Helix* h = new Helix(Ogre::Vector3(200, 0, 0), sNode, mSM, 10);
+    //sNode->translate(500,0,0);
     Airplane* a = new Airplane(Ogre::Vector3(0, 0, 0), sNode, mSM);
     
 }
