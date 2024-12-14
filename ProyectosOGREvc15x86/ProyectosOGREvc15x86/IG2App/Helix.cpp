@@ -3,7 +3,7 @@
 Helix::Helix(const Vector3 initPos, SceneNode* node, SceneManager* sm, int n)
 	: IG2Object(initPos, node, sm)
 {
-    //helix = mNode->createChildSceneNode();
+    helix = mNode->createChildSceneNode();
 
     float x, y, z = 0;
     float radius = 50;
@@ -14,7 +14,7 @@ Helix::Helix(const Vector3 initPos, SceneNode* node, SceneManager* sm, int n)
         x = radius * Ogre::Math::Cos(angle);
         y = radius * Ogre::Math::Sin(angle);
 
-        Blade* b = new Blade(mNode->getPosition(), mNode->createChildSceneNode(), mSM);
+        Blade* b = new Blade(helix->getPosition(), helix->createChildSceneNode(), mSM);
 
         b->getBladeNode()->setPosition(x, y, z);
 
@@ -22,10 +22,9 @@ Helix::Helix(const Vector3 initPos, SceneNode* node, SceneManager* sm, int n)
         b->getBladeNode()->yaw(Radian(angle));  // rotacion en Y
 	}
 
-	center = mNode->createChildSceneNode();
+	center = helix->createChildSceneNode();
     Entity* ent = mSM->createEntity("sphere.mesh");
     center->attachObject(ent);
-    center->setPosition(mNode->getPosition());
     center->setScale(0.2, 0.2, 0.5);
 
 

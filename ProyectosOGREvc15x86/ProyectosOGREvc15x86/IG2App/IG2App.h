@@ -21,6 +21,8 @@
 #include <string>
 //#include "DataSizes.h"
 
+#include "Airplane.h"
+
 class IG2App : public  OgreBites::IG2ApplicationContext, OgreBites::InputListener{
 
 public:
@@ -44,7 +46,10 @@ private:
    
     // Camera
     Ogre::SceneNode* mCamNode = nullptr;
-    OgreBites::CameraMan* mCamMgr = nullptr;                       
+    OgreBites::CameraMan* mCamMgr = nullptr;    
+
+    // avion
+    Airplane* airplane = nullptr;
     
 };
 

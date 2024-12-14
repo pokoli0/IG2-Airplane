@@ -16,10 +16,10 @@ Airplane::Airplane(const Vector3 initPos, SceneNode* node, SceneManager* sm)
 	wings->setScale(10, 0.2, 1);
 
 	helix1 = plane->createChildSceneNode("H1");
-	Helix* h1 = new Helix(Vector3(150, 0, 50), helix1, mSM, 10);
+	Helix* h1 = new Helix(Vector3(300, 0, 50), helix1, mSM, 10);
 
 	helix2 = plane->createChildSceneNode("H2");
-	Helix* h2 = new Helix(Vector3(-150, 0, 50), helix2, mSM, 10);
+	Helix* h2 = new Helix(Vector3(-300, 0, 50), helix2, mSM, 10);
 
 	pilot = plane->createChildSceneNode("pilot");
 	ent = mSM->createEntity("ninja.mesh");
@@ -33,4 +33,10 @@ Airplane::Airplane(const Vector3 initPos, SceneNode* node, SceneManager* sm)
 	rudder->setScale(0.2, 3, 1);
 	rudder->setPosition(0, 50, -150);
 	rudder->pitch(Degree(-45));
+}
+
+void Airplane::move()
+{
+	helix1->roll(Degree(10));
+	helix2->roll(Degree(10));
 }

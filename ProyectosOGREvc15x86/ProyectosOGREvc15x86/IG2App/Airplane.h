@@ -7,6 +7,9 @@ class Airplane : public IG2Object
 public:
 	Airplane(const Vector3 initPos, SceneNode* node, SceneManager* sm);
 	
+
+	void move();
+
 private:
 	SceneNode* plane;
 

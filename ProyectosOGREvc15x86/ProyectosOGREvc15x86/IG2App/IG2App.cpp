@@ -2,7 +2,6 @@
 
 #include "Blade.h"
 #include "Helix.h"
-#include "Airplane.h"
 
 using namespace Ogre;
 using namespace std;
@@ -15,6 +14,9 @@ bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt){
     // ESC key finished the rendering...
     if (evt.keysym.sym == SDLK_ESCAPE){
         getRoot()->queueEndRendering();
+    }
+    else if (evt.keysym.sym == SDLK_w) {
+        airplane->move();
     }
     
   return true;
@@ -108,7 +110,7 @@ void IG2App::setupScene(void){
 
     //Helix* h = new Helix(Ogre::Vector3(200, 0, 0), sNode, mSM, 10);
     //sNode->translate(500,0,0);
-    Airplane* a = new Airplane(Ogre::Vector3(0, 0, 0), sNode, mSM);
+    airplane = new Airplane(Ogre::Vector3(0, 0, 0), sNode, mSM);
     
 }
 

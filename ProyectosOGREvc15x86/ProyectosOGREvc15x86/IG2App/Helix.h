@@ -8,6 +8,8 @@ class Helix : public IG2Object
 public:
 	Helix(const Vector3 initPos, SceneNode* node, SceneManager* sm, int n);
 
+	SceneNode* getNode() { return helix; }
+
 private:
 	SceneNode* helix; //papa
 
